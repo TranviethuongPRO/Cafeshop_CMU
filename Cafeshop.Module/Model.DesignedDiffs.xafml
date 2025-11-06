@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="Cafeshop">
+  <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="@a1cd0e5f-4c58-42d4-9e4f-c26fc623d5af" Caption="Quản Lý" ImageName="BO_Position_v92" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="@0d272ecc-e5d5-48ad-8b3e-db6312c85cef" Caption="Sản phẩm" ImageName="BO_Quote" ViewId="Sanpham_ListView" IsNewNode="True" />
+          <Item Id="@9fab2204-14da-4a55-aedf-efc76f01b9af" Caption="Hóa đơn" ImageName="BO_Invoice" ViewId="Hoadon_ListView" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="25.1.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <ListView Id="Hoadon_HoadonCTs_ListView" AllowEdit="True" NewItemRowPosition="Top" />
+    <ListView Id="Sanpham_ListView" AllowEdit="True" NewItemRowPosition="Top" />
+  </Views>
+</Application>
