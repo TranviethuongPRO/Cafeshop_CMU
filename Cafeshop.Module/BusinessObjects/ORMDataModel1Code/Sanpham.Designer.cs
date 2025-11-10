@@ -13,10 +13,9 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-using DevExpress.Persistent.Base;
 namespace Cafeshop.Module.ORMDataModel1
 {
-    [DefaultClassOptions]
+
     [DefaultProperty("TenSP")]
     public partial class Sanpham : DevExpress.Persistent.BaseImpl.BaseObject
     {
@@ -47,6 +46,12 @@ DevExpress.ExpressApp.Model.ModelDefault("EditMask", "### ### ### ###")]
         }
         [Association(@"HoadonCTReferencesSanpham"), Aggregated]
         public XPCollection<HoadonCT> HoadonCTs { get { return GetCollection<HoadonCT>(nameof(HoadonCTs)); } }
+        [Association(@"DinhluongReferencesSanpham"), Aggregated]
+        public XPCollection<Dinhluong> Dinhluongs { get { return GetCollection<Dinhluong>(nameof(Dinhluongs)); } }
+        [Association(@"DinhluongReferencesSanpham1"), Aggregated]
+        public XPCollection<Dinhluong> Dinhluongs1 { get { return GetCollection<Dinhluong>(nameof(Dinhluongs1)); } }
+        [Association(@"TieuhaoReferencesSanpham"), Aggregated]
+        public XPCollection<Tieuhao> Tieuhaos { get { return GetCollection<Tieuhao>(nameof(Tieuhaos)); } }
     }
 
 }

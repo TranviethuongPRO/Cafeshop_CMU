@@ -8,7 +8,12 @@
       <Item Id="@a1cd0e5f-4c58-42d4-9e4f-c26fc623d5af" Caption="Quản Lý" ImageName="BO_Position_v92" IsNewNode="True">
         <Items IsNewNode="True">
           <Item Id="@0d272ecc-e5d5-48ad-8b3e-db6312c85cef" Caption="Sản phẩm" ImageName="BO_Quote" ViewId="Sanpham_ListView" IsNewNode="True" />
+          <Item Id="@4b0bd9fc-d2ac-452c-b3e6-5c141d29cee8" Caption="Nhân viên" ViewId="Nhanvien_ListView" IsNewNode="True" />
+          <Item Id="@52e7aaec-8bcd-47da-87e8-a4d969350303" ViewId="Chamcong_ListView" Caption="Chấm công" IsNewNode="True" />
+          <Item Id="@90944a39-1d99-4aca-aeb7-2d844211a0ff" Caption="Tiêu hao" ViewId="Tieuhao_ListView" IsNewNode="True" />
+          <Item Id="@9698a263-35f9-470d-8ea3-159345418ecf" Caption="Định lượng" ViewId="Dinhluong_ListView" IsNewNode="True" />
           <Item Id="@9fab2204-14da-4a55-aedf-efc76f01b9af" Caption="Hóa đơn" ImageName="BO_Invoice" ViewId="Hoadon_ListView" IsNewNode="True" />
+          <Item Id="@bd879612-0298-45c9-ae79-1973cbd770f4" Caption="Khách hàng" ViewId="Khachhang_ListView" IsNewNode="True" />
         </Items>
       </Item>
     </Items>

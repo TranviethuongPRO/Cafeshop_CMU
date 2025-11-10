@@ -13,30 +13,24 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-using DevExpress.Persistent.Base;
 namespace Cafeshop.Module.ORMDataModel1
 {
-    [DefaultClassOptions]
+
+    [DefaultProperty("HoadonCTID")]
     public partial class HoadonCT : XPObject
     {
-        Hoadon fHoadonID;
-        [Association(@"HoadonCTReferencesHoadon")]
-        public Hoadon HoadonID
+        string fHoadonID;
+        public string HoadonID
         {
             get { return fHoadonID; }
-            set { SetPropertyValue<Hoadon>(nameof(HoadonID), ref fHoadonID, value); }
+            set { SetPropertyValue<string>(nameof(HoadonID), ref fHoadonID, value); }
         }
         Sanpham fSanphamID;
         [Association(@"HoadonCTReferencesSanpham")]
         public Sanpham SanphamID
         {
             get { return fSanphamID; }
-            set {
-                if (SetPropertyValue<Sanpham>(nameof(SanphamID), ref fSanphamID, value)
-                    && !IsLoading && IsDeleted && value != null)
-                    Dongia = value.Giaban;
-            
-            }
+            set { SetPropertyValue<Sanpham>(nameof(SanphamID), ref fSanphamID, value); }
         }
         double fSoluong;
         public double Soluong
@@ -45,23 +39,25 @@ namespace Cafeshop.Module.ORMDataModel1
             set { SetPropertyValue<double>(nameof(Soluong), ref fSoluong, value); }
         }
         decimal fDongia;
-
-        [DevExpress.Xpo.DisplayName(@"Đơn giá")]
-        [DevExpress.ExpressApp.Model.ModelDefault("DisplayFormat", "### ### ### ###"),
-DevExpress.ExpressApp.Model.ModelDefault("EditMask", "### ### ### ###")]
         public decimal Dongia
         {
             get { return fDongia; }
             set { SetPropertyValue<decimal>(nameof(Dongia), ref fDongia, value); }
         }
         [PersistentAlias("ToDecimal([Soluong]) * [Dongia]")]
-        [DevExpress.Xpo.DisplayName(@"Thành tiền")]
-        [DevExpress.ExpressApp.Model.ModelDefault("DisplayFormat", "### ### ### ###"),
-DevExpress.ExpressApp.Model.ModelDefault("EditMask", "### ### ### ###")]
         public decimal Thanhtien
         {
             get { return (decimal)(EvaluateAlias(nameof(Thanhtien))); }
         }
+        Hoadon fHoadonCTID;
+        [Association(@"HoadonCTReferencesHoadon")]
+        public Hoadon HoadonCTID
+        {
+            get { return fHoadonCTID; }
+            set { SetPropertyValue<Hoadon>(nameof(HoadonCTID), ref fHoadonCTID, value); }
+        }
+        [Association(@"TieuhaoReferencesHoadonCT"), Aggregated]
+        public XPCollection<Tieuhao> Tieuhaos { get { return GetCollection<Tieuhao>(nameof(Tieuhaos)); } }
     }
 
 }

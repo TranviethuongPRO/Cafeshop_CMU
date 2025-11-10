@@ -13,12 +13,10 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-using DevExpress.Persistent.Base;
 namespace Cafeshop.Module.ORMDataModel1
 {
 
-    [DefaultProperty("Soban")]
-    [DefaultClassOptions]
+    [DefaultProperty("HoadonID")]
     public partial class Hoadon : DevExpress.Persistent.BaseImpl.BaseObject
     {
         int fSoban;
@@ -44,20 +42,25 @@ DevExpress.ExpressApp.Model.ModelDefault("DisplayFormat", "{0:dd/MM/yyyy HH:mm}"
             get { return fSophieu; }
             set { SetPropertyValue<int>(nameof(Sophieu), ref fSophieu, value); }
         }
-        [DevExpress.Xpo.DisplayName(@"Tổng tiền")]
-        [DevExpress.ExpressApp.Model.ModelDefault("DisplayFormat", "### ### ### ###")]
-
-        public decimal Tongtien
+        Khachhang fKhachhangID;
+        [Association(@"HoadonReferencesKhachhang")]
+        public Khachhang KhachhangID
         {
-            get
-            {
-                decimal tien = 0;
-                foreach(HoadonCT item in HoadonCTs)
-                {
-                    tien += item.Thanhtien;
-                }
-                return tien;
-            }
+            get { return fKhachhangID; }
+            set { SetPropertyValue<Khachhang>(nameof(KhachhangID), ref fKhachhangID, value); }
+        }
+        Nhanvien fNhanvienID;
+        [Association(@"HoadonReferencesNhanvien")]
+        public Nhanvien NhanvienID
+        {
+            get { return fNhanvienID; }
+            set { SetPropertyValue<Nhanvien>(nameof(NhanvienID), ref fNhanvienID, value); }
+        }
+        string fHoadonID;
+        public string HoadonID
+        {
+            get { return fHoadonID; }
+            set { SetPropertyValue<string>(nameof(HoadonID), ref fHoadonID, value); }
         }
         [Association(@"HoadonCTReferencesHoadon"), Aggregated]
         public XPCollection<HoadonCT> HoadonCTs { get { return GetCollection<HoadonCT>(nameof(HoadonCTs)); } }
