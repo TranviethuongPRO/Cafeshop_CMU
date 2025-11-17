@@ -16,6 +16,7 @@ using System.Reflection;
 namespace Cafeshop.Module.ORMDataModel1
 {
 
+    [DefaultProperty("ChiID")]
     public partial class Phieuchi : XPObject
     {
         string fNhanvien_ID;

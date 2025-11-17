@@ -16,6 +16,7 @@ using System.Reflection;
 namespace Cafeshop.Module.ORMDataModel1
 {
 
+    [DefaultProperty("NCCID")]
     public partial class Nhacungcap : XPObject
     {
         string fNCC_ID;

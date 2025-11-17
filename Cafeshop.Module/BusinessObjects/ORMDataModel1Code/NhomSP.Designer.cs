@@ -16,6 +16,7 @@ using System.Reflection;
 namespace Cafeshop.Module.ORMDataModel1
 {
 
+    [DefaultProperty("NhomID")]
     public partial class NhomSP : DevExpress.Persistent.BaseImpl.BaseObject
     {
         string fNhom_ID;

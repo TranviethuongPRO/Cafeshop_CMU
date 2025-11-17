@@ -16,6 +16,7 @@ using System.Reflection;
 namespace Cafeshop.Module.ORMDataModel1
 {
 
+    [DefaultProperty("DongID")]
     public partial class Dongnhap : XPObject
     {
         string fSanpham_ID;

@@ -16,6 +16,7 @@ using System.Reflection;
 namespace Cafeshop.Module.ORMDataModel1
 {
 
+    [DefaultProperty("LuongID")]
     public partial class Bangluong : XPObject
     {
         string fNhanvien_ID;
