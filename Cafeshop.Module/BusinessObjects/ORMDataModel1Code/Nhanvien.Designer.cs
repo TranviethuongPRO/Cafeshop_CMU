@@ -16,43 +16,20 @@ using System.Reflection;
 namespace Cafeshop.Module.ORMDataModel1
 {
 
-    [DefaultProperty("NhanvienID")]
-    public partial class Nhanvien : DevExpress.Persistent.BaseImpl.BaseObject
+    public partial class NhanVien : XPObject
     {
-        string fNhanvienID;
-        public string NhanvienID
+        string fField1;
+        public string Field1
         {
-            get { return fNhanvienID; }
-            set { SetPropertyValue<string>(nameof(NhanvienID), ref fNhanvienID, value); }
+            get { return fField1; }
+            set { SetPropertyValue<string>(nameof(Field1), ref fField1, value); }
         }
-        string fHoten;
-        public string Hoten
+        string fField2;
+        public string Field2
         {
-            get { return fHoten; }
-            set { SetPropertyValue<string>(nameof(Hoten), ref fHoten, value); }
+            get { return fField2; }
+            set { SetPropertyValue<string>(nameof(Field2), ref fField2, value); }
         }
-        int fSodienthoai;
-        public int Sodienthoai
-        {
-            get { return fSodienthoai; }
-            set { SetPropertyValue<int>(nameof(Sodienthoai), ref fSodienthoai, value); }
-        }
-        double fMucluong;
-        public double Mucluong
-        {
-            get { return fMucluong; }
-            set { SetPropertyValue<double>(nameof(Mucluong), ref fMucluong, value); }
-        }
-        [Association(@"ChamcongReferencesNhanvien"), Aggregated]
-        public XPCollection<Chamcong> Chamcongs { get { return GetCollection<Chamcong>(nameof(Chamcongs)); } }
-        [Association(@"HoadonReferencesNhanvien"), Aggregated]
-        public XPCollection<Hoadon> Hoadons { get { return GetCollection<Hoadon>(nameof(Hoadons)); } }
-        [Association(@"PhieuchiReferencesNhanvien"), Aggregated]
-        public XPCollection<Phieuchi> Phieuchis { get { return GetCollection<Phieuchi>(nameof(Phieuchis)); } }
-        [Association(@"BangluongReferencesNhanvien"), Aggregated]
-        public XPCollection<Bangluong> Bangluongs { get { return GetCollection<Bangluong>(nameof(Bangluongs)); } }
-        [Association(@"PhieunhapReferencesNhanvien"), Aggregated]
-        public XPCollection<Phieunhap> Phieunhaps { get { return GetCollection<Phieunhap>(nameof(Phieunhaps)); } }
     }
 
 }

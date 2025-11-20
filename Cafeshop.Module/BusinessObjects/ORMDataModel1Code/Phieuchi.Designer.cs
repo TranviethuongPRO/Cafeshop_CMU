@@ -16,15 +16,13 @@ using System.Reflection;
 namespace Cafeshop.Module.ORMDataModel1
 {
 
-    [DefaultProperty("ChiID")]
-    public partial class Phieuchi : DevExpress.Persistent.BaseImpl.BaseObject
+    public partial class Phieuchi : XPObject
     {
-        Nhanvien fNhanvienID;
-        [Association(@"PhieuchiReferencesNhanvien")]
-        public Nhanvien NhanvienID
+        string fNhanvienID;
+        public string NhanvienID
         {
             get { return fNhanvienID; }
-            set { SetPropertyValue<Nhanvien>(nameof(NhanvienID), ref fNhanvienID, value); }
+            set { SetPropertyValue<string>(nameof(NhanvienID), ref fNhanvienID, value); }
         }
         string fNCC_ID;
         public string NCC_ID
@@ -38,19 +36,17 @@ namespace Cafeshop.Module.ORMDataModel1
             get { return fSo; }
             set { SetPropertyValue<string>(nameof(So), ref fSo, value); }
         }
-        DateTime fNgay;
-        public DateTime Ngay
+        string fNgay;
+        public string Ngay
         {
             get { return fNgay; }
-            set { SetPropertyValue<DateTime>(nameof(Ngay), ref fNgay, value); }
+            set { SetPropertyValue<string>(nameof(Ngay), ref fNgay, value); }
         }
-        decimal fSotien;
-        [DevExpress.ExpressApp.Model.ModelDefault("DisplayFormat", "### ### ### ###"),
-DevExpress.ExpressApp.Model.ModelDefault("EditMask", "### ### ### ###")]
-        public decimal Sotien
+        string fSotien;
+        public string Sotien
         {
             get { return fSotien; }
-            set { SetPropertyValue<decimal>(nameof(Sotien), ref fSotien, value); }
+            set { SetPropertyValue<string>(nameof(Sotien), ref fSotien, value); }
         }
     }
 

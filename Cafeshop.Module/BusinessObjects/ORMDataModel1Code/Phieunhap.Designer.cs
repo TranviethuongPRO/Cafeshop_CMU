@@ -16,11 +16,9 @@ using System.Reflection;
 namespace Cafeshop.Module.ORMDataModel1
 {
 
-    [DefaultProperty("NhanID")]
-    public partial class Phieunhap : DevExpress.Persistent.BaseImpl.BaseObject
+    public partial class Phieunhap : XPObject
     {
         string fNhap_ID;
-        [Size(30)]
         public string Nhap_ID
         {
             get { return fNhap_ID; }
@@ -32,29 +30,24 @@ namespace Cafeshop.Module.ORMDataModel1
             get { return fNCC_ID; }
             set { SetPropertyValue<string>(nameof(NCC_ID), ref fNCC_ID, value); }
         }
-        Nhanvien fNhanvienID;
-        [Association(@"PhieunhapReferencesNhanvien")]
-        public Nhanvien NhanvienID
+        string fNhanvien_ID;
+        public string Nhanvien_ID
         {
-            get { return fNhanvienID; }
-            set { SetPropertyValue<Nhanvien>(nameof(NhanvienID), ref fNhanvienID, value); }
+            get { return fNhanvien_ID; }
+            set { SetPropertyValue<string>(nameof(Nhanvien_ID), ref fNhanvien_ID, value); }
         }
-        decimal fSo;
-        public decimal So
+        string fSo;
+        public string So
         {
             get { return fSo; }
-            set { SetPropertyValue<decimal>(nameof(So), ref fSo, value); }
+            set { SetPropertyValue<string>(nameof(So), ref fSo, value); }
         }
-        DateTime fNgay;
-        [DevExpress.ExpressApp.Model.ModelDefault("EditMask", "dd/MM/yyyy HH:mm"),
-DevExpress.ExpressApp.Model.ModelDefault("DisplayFormat", "{0:dd/MM/yyyy HH:mm}")]
-        public DateTime Ngay
+        string fNgay;
+        public string Ngay
         {
             get { return fNgay; }
-            set { SetPropertyValue<DateTime>(nameof(Ngay), ref fNgay, value); }
+            set { SetPropertyValue<string>(nameof(Ngay), ref fNgay, value); }
         }
-        [Association(@"DongnhapReferencesPhieunhap"), Aggregated]
-        public XPCollection<Dongnhap> Dongnhaps { get { return GetCollection<Dongnhap>(nameof(Dongnhaps)); } }
     }
 
 }

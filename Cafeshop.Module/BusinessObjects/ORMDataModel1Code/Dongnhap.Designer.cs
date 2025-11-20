@@ -32,12 +32,11 @@ namespace Cafeshop.Module.ORMDataModel1
             get { return fTenSP; }
             set { SetPropertyValue<Sanpham>(nameof(TenSP), ref fTenSP, value); }
         }
-        Phieunhap fNhap_ID;
-        [Association(@"DongnhapReferencesPhieunhap")]
-        public Phieunhap Nhap_ID
+        string fNhap_ID;
+        public string Nhap_ID
         {
             get { return fNhap_ID; }
-            set { SetPropertyValue<Phieunhap>(nameof(Nhap_ID), ref fNhap_ID, value); }
+            set { SetPropertyValue<string>(nameof(Nhap_ID), ref fNhap_ID, value); }
         }
         int fSoluong;
         public int Soluong
