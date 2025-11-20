@@ -31,6 +31,9 @@
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.12.0" />
   </ItemGroup>
   <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
     <None Update="BusinessObjects\ORMDataModel1.xpo.diagram">
       <AutoGen>True</AutoGen>
     </None>

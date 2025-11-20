@@ -44,6 +44,13 @@ DevExpress.ExpressApp.Model.ModelDefault("EditMask", "### ### ### ###")]
             get { return fGiaban; }
             set { SetPropertyValue<decimal>(nameof(Giaban), ref fGiaban, value); }
         }
+        NhomSP fNhom_ID;
+        [Association(@"SanphamReferencesNhomSP")]
+        public NhomSP Nhom_ID
+        {
+            get { return fNhom_ID; }
+            set { SetPropertyValue<NhomSP>(nameof(Nhom_ID), ref fNhom_ID, value); }
+        }
         [Association(@"HoadonCTReferencesSanpham"), Aggregated]
         public XPCollection<HoadonCT> HoadonCTs { get { return GetCollection<HoadonCT>(nameof(HoadonCTs)); } }
         [Association(@"DinhluongReferencesSanpham"), Aggregated]
@@ -52,6 +59,8 @@ DevExpress.ExpressApp.Model.ModelDefault("EditMask", "### ### ### ###")]
         public XPCollection<Dinhluong> Dinhluongs1 { get { return GetCollection<Dinhluong>(nameof(Dinhluongs1)); } }
         [Association(@"TieuhaoReferencesSanpham"), Aggregated]
         public XPCollection<Tieuhao> Tieuhaos { get { return GetCollection<Tieuhao>(nameof(Tieuhaos)); } }
+        [Association(@"DongnhapReferencesSanpham"), Aggregated]
+        public XPCollection<Dongnhap> Dongnhaps { get { return GetCollection<Dongnhap>(nameof(Dongnhaps)); } }
     }
 
 }

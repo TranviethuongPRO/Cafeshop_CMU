@@ -16,6 +16,7 @@ using System.Reflection;
 namespace Cafeshop.Module.ORMDataModel1
 {
 
+    [DefaultProperty("NhomID")]
     public partial class NhomSP : DevExpress.Persistent.BaseImpl.BaseObject
     {
         string fNhom_ID;
@@ -36,6 +37,8 @@ namespace Cafeshop.Module.ORMDataModel1
             get { return fPhanloai; }
             set { SetPropertyValue<string>(nameof(Phanloai), ref fPhanloai, value); }
         }
+        [Association(@"SanphamReferencesNhomSP"), Aggregated]
+        public XPCollection<Sanpham> Sanphams { get { return GetCollection<Sanpham>(nameof(Sanphams)); } }
     }
 
 }

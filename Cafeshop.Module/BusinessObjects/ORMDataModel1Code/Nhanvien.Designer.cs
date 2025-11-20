@@ -47,6 +47,12 @@ namespace Cafeshop.Module.ORMDataModel1
         public XPCollection<Chamcong> Chamcongs { get { return GetCollection<Chamcong>(nameof(Chamcongs)); } }
         [Association(@"HoadonReferencesNhanvien"), Aggregated]
         public XPCollection<Hoadon> Hoadons { get { return GetCollection<Hoadon>(nameof(Hoadons)); } }
+        [Association(@"PhieuchiReferencesNhanvien"), Aggregated]
+        public XPCollection<Phieuchi> Phieuchis { get { return GetCollection<Phieuchi>(nameof(Phieuchis)); } }
+        [Association(@"BangluongReferencesNhanvien"), Aggregated]
+        public XPCollection<Bangluong> Bangluongs { get { return GetCollection<Bangluong>(nameof(Bangluongs)); } }
+        [Association(@"PhieunhapReferencesNhanvien"), Aggregated]
+        public XPCollection<Phieunhap> Phieunhaps { get { return GetCollection<Phieunhap>(nameof(Phieunhaps)); } }
     }
 
 }

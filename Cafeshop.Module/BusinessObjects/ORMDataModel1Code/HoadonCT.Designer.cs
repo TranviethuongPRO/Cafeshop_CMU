@@ -17,7 +17,7 @@ namespace Cafeshop.Module.ORMDataModel1
 {
 
     [DefaultProperty("HoadonCTID")]
-    public partial class HoadonCT : XPObject
+    public partial class HoadonCT : DevExpress.Persistent.BaseImpl.BaseObject
     {
         string fHoadonID;
         public string HoadonID

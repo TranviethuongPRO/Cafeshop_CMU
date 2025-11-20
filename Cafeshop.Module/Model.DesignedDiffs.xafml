@@ -8,12 +8,18 @@
       <Item Id="@a1cd0e5f-4c58-42d4-9e4f-c26fc623d5af" Caption="Quản Lý" ImageName="BO_Position_v92" IsNewNode="True">
         <Items IsNewNode="True">
           <Item Id="@0d272ecc-e5d5-48ad-8b3e-db6312c85cef" Caption="Sản phẩm" ImageName="BO_Quote" ViewId="Sanpham_ListView" IsNewNode="True" />
-          <Item Id="@4b0bd9fc-d2ac-452c-b3e6-5c141d29cee8" Caption="Nhân viên" ViewId="Nhanvien_ListView" IsNewNode="True" />
-          <Item Id="@52e7aaec-8bcd-47da-87e8-a4d969350303" ViewId="Chamcong_ListView" Caption="Chấm công" IsNewNode="True" />
-          <Item Id="@90944a39-1d99-4aca-aeb7-2d844211a0ff" Caption="Tiêu hao" ViewId="Tieuhao_ListView" IsNewNode="True" />
-          <Item Id="@9698a263-35f9-470d-8ea3-159345418ecf" Caption="Định lượng" ViewId="Dinhluong_ListView" IsNewNode="True" />
+          <Item Id="@4b0bd9fc-d2ac-452c-b3e6-5c141d29cee8" Caption="Nhân viên" ViewId="Nhanvien_ListView" ImageName="BO_Employee" IsNewNode="True" />
+          <Item Id="@4e393af1-71ce-448c-8844-7fa9a2478887" Caption="Nhà cung cấp" ViewId="Nhacungcap_ListView" ImageName="ShipmentTransit" IsNewNode="True" />
+          <Item Id="@52e7aaec-8bcd-47da-87e8-a4d969350303" ViewId="Chamcong_ListView" Caption="Chấm công" ImageName="BO_Note" IsNewNode="True" />
+          <Item Id="@55427c69-9bb8-4399-b5b9-fa0d47b4c25b" Caption="Đồng nhập" ViewId="Dongnhap_ListView" ImageName="BO_Price_Item" IsNewNode="True" />
+          <Item Id="@90944a39-1d99-4aca-aeb7-2d844211a0ff" Caption="Tiêu hao" ViewId="Tieuhao_ListView" ImageName="PageColor" IsNewNode="True" />
+          <Item Id="@9698a263-35f9-470d-8ea3-159345418ecf" Caption="Định lượng" ViewId="Dinhluong_ListView" ImageName="WeightedPies" IsNewNode="True" />
           <Item Id="@9fab2204-14da-4a55-aedf-efc76f01b9af" Caption="Hóa đơn" ImageName="BO_Invoice" ViewId="Hoadon_ListView" IsNewNode="True" />
-          <Item Id="@bd879612-0298-45c9-ae79-1973cbd770f4" Caption="Khách hàng" ViewId="Khachhang_ListView" IsNewNode="True" />
+          <Item Id="@b3ed93b5-c2bb-4ef5-b242-c156faf5fcb8" Caption="Bảng lương" ViewId="Bangluong_ListView" ImageName="BO_Task" IsNewNode="True" />
+          <Item Id="@b88850b7-7b49-4b70-b078-7d9fbcce2f94" Caption="Phiếu nhập" ViewId="Phieunhap_ListView" ImageName="GroupLabels" IsNewNode="True" />
+          <Item Id="@bd879612-0298-45c9-ae79-1973cbd770f4" Caption="Khách hàng" ViewId="Khachhang_ListView" ImageName="BO_Department" IsNewNode="True" />
+          <Item Id="@ca94c2a5-8b23-4190-8a08-490425f84f82" Caption="Phiếu chi" ViewId="Phieuchi_ListView" ImageName="Treemap" IsNewNode="True" />
+          <Item Id="@e884395a-02f7-4662-976a-11ac899f5f56" Caption="Nhóm sản phẩm" ViewId="NhomSP_ListView" ImageName="Travel_Bar" IsNewNode="True" />
         </Items>
       </Item>
     </Items>
