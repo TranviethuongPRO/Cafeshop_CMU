@@ -16,37 +16,25 @@ using System.Reflection;
 namespace Cafeshop.Module.ORMDataModel1
 {
 
-    [DefaultProperty("ChamcongID")]
-    public partial class Chamcong : DevExpress.Persistent.BaseImpl.BaseObject
+    public partial class ChamCong : XPObject
     {
-        string fChamcongID;
-        public string ChamcongID
+        string fNhanVien_ID;
+        public string NhanVien_ID
         {
-            get { return fChamcongID; }
-            set { SetPropertyValue<string>(nameof(ChamcongID), ref fChamcongID, value); }
+            get { return fNhanVien_ID; }
+            set { SetPropertyValue<string>(nameof(NhanVien_ID), ref fNhanVien_ID, value); }
         }
-        Nhanvien fNhanvienID;
-        [Association(@"ChamcongReferencesNhanvien")]
-        public Nhanvien NhanvienID
-        {
-            get { return fNhanvienID; }
-            set { SetPropertyValue<Nhanvien>(nameof(NhanvienID), ref fNhanvienID, value); }
-        }
-        DateTime fGiovao;
-        [DevExpress.ExpressApp.Model.ModelDefault("EditMask", "dd/MM/yyyy HH:mm"),
-DevExpress.ExpressApp.Model.ModelDefault("DisplayFormat", "{0:dd/MM/yyyy HH:mm}")]
-        public DateTime Giovao
+        string fGiovao;
+        public string Giovao
         {
             get { return fGiovao; }
-            set { SetPropertyValue<DateTime>(nameof(Giovao), ref fGiovao, value); }
+            set { SetPropertyValue<string>(nameof(Giovao), ref fGiovao, value); }
         }
-        DateTime fGiora;
-        [DevExpress.ExpressApp.Model.ModelDefault("EditMask", "dd/MM/yyyy HH:mm"),
-DevExpress.ExpressApp.Model.ModelDefault("DisplayFormat", "{0:dd/MM/yyyy HH:mm}")]
-        public DateTime Giora
+        string fGiora;
+        public string Giora
         {
             get { return fGiora; }
-            set { SetPropertyValue<DateTime>(nameof(Giora), ref fGiora, value); }
+            set { SetPropertyValue<string>(nameof(Giora), ref fGiora, value); }
         }
     }
 

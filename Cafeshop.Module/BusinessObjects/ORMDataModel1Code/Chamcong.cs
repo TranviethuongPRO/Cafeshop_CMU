@@ -8,9 +8,9 @@ using System.Reflection;
 namespace Cafeshop.Module.ORMDataModel1
 {
 
-    public partial class Chamcong
+    public partial class ChamCong
     {
-        public Chamcong(Session session) : base(session) { }
+        public ChamCong(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 
