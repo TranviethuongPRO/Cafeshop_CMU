@@ -15,7 +15,7 @@ using System.ComponentModel;
 using System.Reflection;
 namespace Cafeshop.Module.ORMDataModel1
 {
-
+   
     [DefaultProperty("DinhluongID")]
     public partial class Dinhluong : DevExpress.Persistent.BaseImpl.BaseObject
     {

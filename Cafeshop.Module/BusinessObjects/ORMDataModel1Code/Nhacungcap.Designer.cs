@@ -16,10 +16,11 @@ using System.Reflection;
 namespace Cafeshop.Module.ORMDataModel1
 {
 
-    [DefaultProperty("NCCID")]
-    public partial class Nhacungcap : XPObject
+    [DefaultProperty("NCC_ID")]
+    public partial class Nhacungcap : DevExpress.Persistent.BaseImpl.BaseObject
     {
         string fNCC_ID;
+        [Size(30)]
         public string NCC_ID
         {
             get { return fNCC_ID; }
@@ -31,11 +32,11 @@ namespace Cafeshop.Module.ORMDataModel1
             get { return fHoten; }
             set { SetPropertyValue<string>(nameof(Hoten), ref fHoten, value); }
         }
-        string fDienthoai;
-        public string Dienthoai
+        int fDienthoai;
+        public int Dienthoai
         {
             get { return fDienthoai; }
-            set { SetPropertyValue<string>(nameof(Dienthoai), ref fDienthoai, value); }
+            set { SetPropertyValue<int>(nameof(Dienthoai), ref fDienthoai, value); }
         }
         string fMST;
         public string MST

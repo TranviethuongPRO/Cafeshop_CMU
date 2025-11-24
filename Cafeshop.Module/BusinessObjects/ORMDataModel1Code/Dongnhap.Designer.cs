@@ -17,13 +17,20 @@ namespace Cafeshop.Module.ORMDataModel1
 {
 
     [DefaultProperty("DongID")]
-    public partial class Dongnhap : XPObject
+    public partial class Dongnhap : DevExpress.Persistent.BaseImpl.BaseObject
     {
-        string fSanpham_ID;
-        public string Sanpham_ID
+        string fDongID;
+        public string DongID
         {
-            get { return fSanpham_ID; }
-            set { SetPropertyValue<string>(nameof(Sanpham_ID), ref fSanpham_ID, value); }
+            get { return fDongID; }
+            set { SetPropertyValue<string>(nameof(DongID), ref fDongID, value); }
+        }
+        Sanpham fTenSP;
+        [Association(@"DongnhapReferencesSanpham")]
+        public Sanpham TenSP
+        {
+            get { return fTenSP; }
+            set { SetPropertyValue<Sanpham>(nameof(TenSP), ref fTenSP, value); }
         }
         string fNhap_ID;
         public string Nhap_ID
@@ -31,17 +38,17 @@ namespace Cafeshop.Module.ORMDataModel1
             get { return fNhap_ID; }
             set { SetPropertyValue<string>(nameof(Nhap_ID), ref fNhap_ID, value); }
         }
-        string fSoluong;
-        public string Soluong
+        int fSoluong;
+        public int Soluong
         {
             get { return fSoluong; }
-            set { SetPropertyValue<string>(nameof(Soluong), ref fSoluong, value); }
+            set { SetPropertyValue<int>(nameof(Soluong), ref fSoluong, value); }
         }
-        string fDongia;
-        public string Dongia
+        int fDongia;
+        public int Dongia
         {
             get { return fDongia; }
-            set { SetPropertyValue<string>(nameof(Dongia), ref fDongia, value); }
+            set { SetPropertyValue<int>(nameof(Dongia), ref fDongia, value); }
         }
     }
 

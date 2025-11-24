@@ -19,8 +19,13 @@ namespace Cafeshop.Module.ORMDataModel1
     [DefaultProperty("NhapID")]
     public partial class Phieunhap : XPObject
     {
+        string fNhap_ID;
+        public string Nhap_ID
+        {
+            get { return fNhap_ID; }
+            set { SetPropertyValue<string>(nameof(Nhap_ID), ref fNhap_ID, value); }
+        }
         string fNCC_ID;
-        [Size(30)]
         public string NCC_ID
         {
             get { return fNCC_ID; }
@@ -43,12 +48,6 @@ namespace Cafeshop.Module.ORMDataModel1
         {
             get { return fNgay; }
             set { SetPropertyValue<string>(nameof(Ngay), ref fNgay, value); }
-        }
-        string fNhap_ID;
-        public string Nhap_ID
-        {
-            get { return fNhap_ID; }
-            set { SetPropertyValue<string>(nameof(Nhap_ID), ref fNhap_ID, value); }
         }
     }
 

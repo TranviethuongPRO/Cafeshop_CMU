@@ -19,11 +19,11 @@ namespace Cafeshop.Module.ORMDataModel1
     [DefaultProperty("ChiID")]
     public partial class Phieuchi : XPObject
     {
-        string fNhanvien_ID;
-        public string Nhanvien_ID
+        string fNhanvienID;
+        public string NhanvienID
         {
-            get { return fNhanvien_ID; }
-            set { SetPropertyValue<string>(nameof(Nhanvien_ID), ref fNhanvien_ID, value); }
+            get { return fNhanvienID; }
+            set { SetPropertyValue<string>(nameof(NhanvienID), ref fNhanvienID, value); }
         }
         string fNCC_ID;
         public string NCC_ID

@@ -17,37 +17,43 @@ namespace Cafeshop.Module.ORMDataModel1
 {
 
     [DefaultProperty("LuongID")]
-    public partial class Bangluong : XPObject
+    public partial class Bangluong : DevExpress.Persistent.BaseImpl.BaseObject
     {
-        string fNhanvien_ID;
-        public string Nhanvien_ID
+        Nhanvien fNhanvienID;
+        [Association(@"BangluongReferencesNhanvien")]
+        public Nhanvien NhanvienID
         {
-            get { return fNhanvien_ID; }
-            set { SetPropertyValue<string>(nameof(Nhanvien_ID), ref fNhanvien_ID, value); }
+            get { return fNhanvienID; }
+            set { SetPropertyValue<Nhanvien>(nameof(NhanvienID), ref fNhanvienID, value); }
         }
-        string fNam;
-        public string Nam
+        int fNam;
+        public int Nam
         {
             get { return fNam; }
-            set { SetPropertyValue<string>(nameof(Nam), ref fNam, value); }
+            set { SetPropertyValue<int>(nameof(Nam), ref fNam, value); }
         }
-        string fThang;
-        public string Thang
+        int fThang;
+        public int Thang
         {
             get { return fThang; }
-            set { SetPropertyValue<string>(nameof(Thang), ref fThang, value); }
+            set { SetPropertyValue<int>(nameof(Thang), ref fThang, value); }
         }
-        string fSogio;
-        public string Sogio
+        decimal fSogio;
+        public decimal Sogio
         {
             get { return fSogio; }
-            set { SetPropertyValue<string>(nameof(Sogio), ref fSogio, value); }
+            set { SetPropertyValue<decimal>(nameof(Sogio), ref fSogio, value); }
         }
-        string fLuong;
-        public string Luong
+        [PersistentAlias("[Hesoluong] * [Sogio]")]
+        public decimal Luong
         {
-            get { return fLuong; }
-            set { SetPropertyValue<string>(nameof(Luong), ref fLuong, value); }
+            get { return (decimal)(EvaluateAlias(nameof(Luong))); }
+        }
+        decimal fHesoluong;
+        public decimal Hesoluong
+        {
+            get { return fHesoluong; }
+            set { SetPropertyValue<decimal>(nameof(Hesoluong), ref fHesoluong, value); }
         }
     }
 
